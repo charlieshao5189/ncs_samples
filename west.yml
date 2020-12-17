@@ -4,11 +4,13 @@ manifest:
   remotes:
     - name: ncs
       url-base: https://github.com/nrfconnect
-    - name: examples
+    - name: external_examples
       url-base: https://github.com/charlieshao5189/ncs_samples
   projects:
     - name: nrf
       remote: ncs
+      repo-path: sdk-nrf
+      path: nrf
       revision: v1.4.1
       import: true
     # # Example for how to override a repository in the NCS with your own:
