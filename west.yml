@@ -1,0 +1,23 @@
+# Example your-application/west.yml, using manifest imports, with
+# an NCS fork and a separate module
+manifest:
+  remotes:
+    - name: ncs
+      url-base: https://github.com/nrfconnect
+    - name: examples
+      url-base: https://github.com/charlieshao5189/ncs_samples
+  projects:
+    - name: nrf
+      remote: ncs
+      revision: v1.4.1
+      import: true
+    # # Example for how to override a repository in the NCS with your own:
+    # - name: mcuboot
+    #   remote: your-remote
+    #   revision: your-mcuboot-fork-SHA-or-branch
+    # # Example for how to add a repository not in NCS:
+    # - name: your-custom-library
+    #   remote: your-remote
+    #   revision: your-library-SHA-or-branch
+  self:
+    path: nrf_external_example
